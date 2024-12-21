@@ -19,7 +19,8 @@ footer {
 }
 
 .cat-card {
-  border: 5px solid #ddd;
+  border: 1px solid #ddd;
+  border-radius: 15px;
   text-align: center;
   min-height: 250px;
   display: flex;
@@ -29,6 +30,7 @@ footer {
 
 .cat-info {
   background: #f8f9fa;
-  border-radius: 4px;
   padding: 8px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }

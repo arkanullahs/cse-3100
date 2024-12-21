@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
 
 const featuredCats = [
-  { name: 'Whiskers', age: '2' },
-  { name: 'Mittens', age: '2' },
-  { name: 'Shadow', age: '1' },
+  { name: 'Pumpkin', age: '3', breed: 'Persian' },
+  { name: 'Luna', age: '4', breed: 'Siamese' },
+  { name: 'Simba', age: '2', breed: 'Bengal' },
 ];
 
 export default function Home() {
@@ -45,10 +45,11 @@ export default function Home() {
           {cats.map((cat, i) => (
             <div key={i} className="col-md-4">
               <div className="cat-card">
-                <img src={cat.image} alt={cat.name} className="img-fluid mb-2" style={{ borderRadius: '8px', height: '200px', objectFit: 'cover' }} />
+                <img src={cat.image} alt={cat.name} className="img-fluid" style={{ borderRadius: '5px', height: '200px', objectFit: 'cover' }} />
                 <div className="cat-info">
                   <h3 className="h5 mb-1">{cat.name}</h3>
                   <p className="mb-0">Age: {cat.age}</p>
+                  <p className="mb-0">Breed: {cat.breed}</p>
                 </div>
               </div>
             </div>

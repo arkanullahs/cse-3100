@@ -54,7 +54,13 @@ export default function AvailableCats() {
         {cats.map((cat, i) => (
           <div key={i} className="col-md-4">
             <div className="cat-card">
-              <img src={cat.image} alt={cat.name} className="img-fluid" style={{ borderRadius: '5px', height: '200px', objectFit: 'cover' }} />
+              <img src={cat.image} alt={cat.name} className="img-fluid" style={
+                {
+                  borderTopLeftRadius: '10px',
+                  borderTopRightRadius: '10px',
+                  height: '250px',
+                  objectFit: 'cover'
+                }} />
               <div className="cat-info">
                 <h3 className="h5 mb-1">{cat.name}</h3>
                 <p className="mb-0">Age: {cat.age}</p>
