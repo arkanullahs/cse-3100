@@ -4,31 +4,52 @@ import './AboutUs.css';
 const AboutUs = () => {
     return (
         <section className="about-us container mt-4">
-            <h2>About Purrfect Adoption</h2>
-            <p>
-                Welcome to Purrfect Adoption! We are dedicated to connecting loving
-                families with adorable cats in need of forever homes. Our mission is to
-                ensure every cat gets a second chance at life filled with love, care,
-                and happiness.
-            </p>
-            <h3>Our Vision</h3>
-            <p>
-                We envision a world where every cat has a safe, nurturing environment
-                to thrive. Through community support, awareness, and compassion, we aim
-                to reduce the number of homeless cats and increase successful adoptions.
-            </p>
-            <h3>What We Do</h3>
-            <ul>
-                <li>Rescue and rehabilitate stray or abandoned cats.</li>
-                <li>Work closely with local shelters to find suitable homes.</li>
-                <li>Provide education and resources for cat care.</li>
-            </ul>
-            <p id='shesh'>
-                Thank you for supporting Purrfect Adoption. Together, we can make a
-                difference, one paw at a time.
-            </p>
+            <div>
+                <h3>Our mission</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luc Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Maecenas luc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luc
+                </p>
+            </div>
+
+            <div>
+                <h3>Our history</h3>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luc Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Maecenas luc Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas luc
+                </p>
+            </div>
+
+            {/*team*/}
+            <div>
+                <h3>Our team</h3>
+                <div className="team-grid">
+                    <div className="team-member">
+                        <div className="member-photo">
+                            <img src="https://images.surferseo.art/4c30b9e3-a27a-45a6-a2fc-5d6106d31dca.jpeg" alt="Bob Doe" />
+                        </div>
+                        <p></p>
+                        <p>Owner and CEO</p>
+                    </div>
+                    <div className="team-member">
+                        <div className="member-photo">
+                            <img src="https://img.freepik.com/free-photo/portrait-anthropomorphic-cat-dressed-human-clothes_23-2151107462.jpg" alt="Bob Doe" />
+                        </div>
+                        <p>Ragannito Biral</p>
+                        <p>HR</p>
+                    </div>
+                    <div className="team-member">
+                        <div className="member-photo">
+                            <img src="https://www.chaincatcher.com/upload/image/20241121/1732179135181-73610.webp" alt="Bob Doe" />
+                        </div>
+                        <p>Chill Guy</p>
+                        <p>Head of Department of Chill</p>
+                    </div>
+                </div>
+            </div>
         </section>
     );
 };
+
 
 export default AboutUs;

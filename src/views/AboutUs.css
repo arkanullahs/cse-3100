@@ -21,18 +21,48 @@
     color: #444;
 }
 
-.about-us ul {
-    padding-left: 20px;
-    list-style-type: disc;
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-.about-us ul li {
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+.team-member {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1rem;
 }
 
-#shesh {
-    margin-top: 1.5rem;
+.member-photo {
+    width: 100%;
+    height: 200px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.member-info {
+    text-align: center;
+}
+
+.member-info p:first-child {
     font-weight: bold;
-    color: #444;
+}
+
+.member-info p:last-child {
+    color: #666;
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.member-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
