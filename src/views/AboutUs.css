@@ -1,0 +1,38 @@
+.about-us {
+    padding: 2rem;
+    border-radius: 10px;
+}
+
+.about-us h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.about-us p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-us h3 {
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    color: #444;
+}
+
+.about-us ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+.about-us ul li {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}
+
+#shesh {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    color: #444;
+}
