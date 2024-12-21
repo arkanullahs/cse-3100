@@ -4,6 +4,7 @@ const featuredCats = [
   { name: 'Pumpkin', age: '3', breed: 'Persian' },
   { name: 'Luna', age: '4', breed: 'Siamese' },
   { name: 'Simba', age: '2', breed: 'Bengal' },
+  { name: 'Ziggy', age: '2', breed: 'Bengal' }
 ];
 
 export default function Home() {
@@ -43,13 +44,31 @@ export default function Home() {
         <div className="mt-2 row g-4" id="cats-container"></div>
         <div className="mt-2 row g-4" id="cats-container">
           {cats.map((cat, i) => (
-            <div key={i} className="col-md-4">
+            <div key={i} className="col-lg-3 col-md-4 col-sm-6">
               <div className="cat-card">
-                <img src={cat.image} alt={cat.name} className="img-fluid" style={{ borderRadius: '5px', height: '200px', objectFit: 'cover' }} />
+                <img
+                  src={cat.image}
+                  alt={cat.name}
+                  className="img-fluid"
+                  style={{
+                    borderTopLeftRadius: '10px',
+                    borderTopRightRadius: '10px',
+                    height: '250px',
+                    width: '100%',
+                    objectFit: 'cover',
+                    objectPosition: 'center',
+                  }}
+                />
                 <div className="cat-info">
-                  <h3 className="h5 mb-1">{cat.name}</h3>
-                  <p className="mb-0">Age: {cat.age}</p>
-                  <p className="mb-0">Breed: {cat.breed}</p>
+                  <h3 className="h5 mb-2">{cat.name}</h3>
+                  <div className="cat-details">
+                    <p>
+                      <i className="fas fa-birthday-cake" style={{ color: '#ff7f50' }}></i> {cat.age} years
+                    </p>
+                    <p>
+                      <i className="fas fa-paw" style={{ color: '#6a5acd' }}></i> {cat.breed}
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
