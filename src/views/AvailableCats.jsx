@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import '@fortawesome/fontawesome-free/css/all.min.css';
 
 const availableCats = [
   { name: 'Whiskers', age: '2', breed: 'Siamese' },
@@ -52,19 +53,31 @@ export default function AvailableCats() {
 
       <div className="mt-2 row g-4 cats-container" id="cats-container">
         {cats.map((cat, i) => (
-          <div key={i} className="col-md-4">
+          <div key={i} className="col-lg-3 col-md-4 col-sm-6">
             <div className="cat-card">
-              <img src={cat.image} alt={cat.name} className="img-fluid" style={
-                {
+              <img
+                src={cat.image}
+                alt={cat.name}
+                className="img-fluid"
+                style={{
                   borderTopLeftRadius: '10px',
                   borderTopRightRadius: '10px',
                   height: '250px',
-                  objectFit: 'cover'
-                }} />
+                  width: '100%',
+                  objectFit: 'cover',
+                  objectPosition: 'center',
+                }}
+              />
               <div className="cat-info">
-                <h3 className="h5 mb-1">{cat.name}</h3>
-                <p className="mb-0">Age: {cat.age}</p>
-                <p className="mb-0">Breed: {cat.breed}</p>
+                <h3 className="h5 mb-2">{cat.name}</h3>
+                <div className="cat-details">
+                  <p>
+                    <i className="fas fa-birthday-cake" style={{ color: '#ff7f50' }}></i> {cat.age} years
+                  </p>
+                  <p>
+                    <i className="fas fa-paw" style={{ color: '#6a5acd' }}></i> {cat.breed}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
@@ -73,3 +86,5 @@ export default function AvailableCats() {
     </section>
   );
 }
+
+
