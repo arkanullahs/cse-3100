@@ -63,21 +63,15 @@ export default function AvailableCats() {
 
   return (
     <section className="text-center mt-4">
-      <h2>Available Cats</h2>
-      <p>Meet our adorable cats looking for their forever home!</p>
-
-      <div className="d-flex justify-content-center gap-3 mb-4">
-        {/*dropdwwon */}
-        <div>
-          <label htmlFor="breedFilter" className="me-2">
-            Filter by Breed:
-          </label>
+      <div className="d-flex align-items-center gap-5 mb-4" style={{ borderBottom: '1px solid #ccc', paddingBottom: '10px' }}>
+        <h2>Available Cats</h2>
+        <div className="d-flex gap-2">
           <select
-            id="breedFilter"
             onChange={(e) => handleBreedFilter(e.target.value)}
-            className="form-select w-auto d-inline-block"
+            className="form-select"
+            style={{ width: 'auto', minWidth: '150px' }}
           >
-            <option value="all">All Breeds</option>
+            <option value="all">Select breed</option>
             <option value="Siamese">Siamese</option>
             <option value="Persian">Persian</option>
             <option value="Bengal">Bengal</option>
@@ -86,16 +80,9 @@ export default function AvailableCats() {
             <option value="Abyssinian">Abyssinian</option>
             <option value="Peterbald">Peterbald</option>
           </select>
-        </div>
 
-        {/*searchbox */}
-        <div>
-          <label htmlFor="searchBox" className="me-2">
-            Search by Name:
-          </label>
           <input
             type="text"
-            id="searchBox"
             onChange={(e) => {
               const searchText = e.target.value.toLowerCase();
               setFilteredCats(
@@ -104,16 +91,16 @@ export default function AvailableCats() {
                 )
               );
             }}
-            className="form-control w-auto d-inline-block"
-            placeholder="Enter cat name"
+            className="form-control"
+            placeholder="Search by name"
+            style={{ width: 'auto', minWidth: '200px' }}
           />
         </div>
       </div>
-
       {/* Filter */}
       <div className="mt-2 row g-4 cats-container" id="cats-container">
         {filteredCats.map((cat, i) => (
-          <div key={i} className="col-md-4">
+          <div key={i} className="col-lg-3 col-md-4 col-sm-6">
             <div className="cat-card">
               <img
                 src={cat.image}
