@@ -1,14 +1,27 @@
 import { useEffect, useState } from 'react';
 
 const availableCats = [
-  { name: 'Whiskers', age: '2' },
-  { name: 'Mittens', age: '2' },
-  { name: 'Shadow', age: '1' },
-  { name: 'Pumpkin', age: '3' },
-  { name: 'Luna', age: '4' },
-  { name: 'Simba', age: '2' },
+  { name: 'Whiskers', age: '2', breed: 'Siamese' },
+  { name: 'Mittens', age: '2', breed: 'Persian' },
+  { name: 'Shadow', age: '1', breed: 'Bengal' },
+  { name: 'Pumpkin', age: '3', breed: 'Persian' },
+  { name: 'Luna', age: '4', breed: 'Siamese' },
+  { name: 'Simba', age: '2', breed: 'Bengal' },
+  { name: 'Oliver', age: '5', breed: 'Bengal' },
+  { name: 'Milo', age: '1', breed: 'Birman' },
+  { name: 'Leo', age: '3', breed: 'Sphynx' },
+  { name: 'Bella', age: '2', breed: 'Abyssinian' },
+  { name: 'Charlie', age: '4', breed: 'Sphynx' },
+  { name: 'Lucy', age: '1', breed: 'Persian' },
+  { name: 'Max', age: '6', breed: 'Abyssinian' },
+  { name: 'Tiger', age: '2', breed: 'Peterbald' },
+  { name: 'Nala', age: '3', breed: 'Siamese' },
+  { name: 'Oscar', age: '4', breed: 'Peterbald' },
+  { name: 'Lily', age: '2', breed: 'Birman' },
+  { name: 'Loki', age: '1', breed: 'Siamese' },
+  { name: 'Coco', age: '5', breed: 'Persian' },
+  { name: 'Ziggy', age: '2', breed: 'Bengal' }
 ];
-
 export default function AvailableCats() {
   const [cats, setCats] = useState([]);
 
@@ -41,10 +54,11 @@ export default function AvailableCats() {
         {cats.map((cat, i) => (
           <div key={i} className="col-md-4">
             <div className="cat-card">
-              <img src={cat.image} alt={cat.name} className="img-fluid mb-2" style={{ borderRadius: '8px', height: '200px', objectFit: 'cover' }} />
+              <img src={cat.image} alt={cat.name} className="img-fluid" style={{ borderRadius: '5px', height: '200px', objectFit: 'cover' }} />
               <div className="cat-info">
                 <h3 className="h5 mb-1">{cat.name}</h3>
                 <p className="mb-0">Age: {cat.age}</p>
+                <p className="mb-0">Breed: {cat.breed}</p>
               </div>
             </div>
           </div>

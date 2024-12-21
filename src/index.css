@@ -12,15 +12,16 @@ main {
   flex: 1;
   padding: 1em;
 }
+
 footer {
   padding: 1em;
   text-align: center;
 }
 
 .cat-card {
-  border: 1px solid #ddd;
+  border: 5px solid #ddd;
   text-align: center;
-  height: 250px;
+  min-height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -29,4 +30,5 @@ footer {
 .cat-info {
   background: #f8f9fa;
   border-radius: 4px;
+  padding: 8px;
 }
